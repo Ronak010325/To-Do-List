@@ -1,6 +1,11 @@
 html {
     background-color: rgb(103, 65, 136);
 }
+
+body{
+    height: 100vh;
+}
+
 .container{
     background-color: rgb(247, 239, 229);
     height: fit-content;
@@ -9,9 +14,9 @@ html {
     padding: 20px 50px 50px;
     font-family: "Roboto Slab", serif;
     font-weight: 400;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .row{
