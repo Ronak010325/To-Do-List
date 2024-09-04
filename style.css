@@ -1,0 +1,105 @@
+html {
+    background-color: rgb(103, 65, 136);
+}
+.container{
+    background-color: rgb(247, 239, 229);
+    height: fit-content;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 20px 50px 50px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    background-color: rgb(226, 191, 217);
+    border-radius: 40px;
+    max-width: 550px;
+    gap: 0;
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(103, 65, 136);
+    font-size: 3rem;
+}
+
+input{
+    border-radius: 30px;
+    border: 0;
+    font-size: 2rem;
+    background: transparent;
+    flex: 1;
+    padding: 0 25px 0 25px;
+    color: rgb(103, 65, 136);
+    padding: 0 20px;
+    outline: none;
+}
+
+button{
+    padding: 0;
+    border: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: rgb(200, 161, 224);
+    color: rgb(103, 65, 136);
+}
+
+ul li {
+    font-size: 2rem;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    color: rgb(103, 65, 136);
+    position: relative;
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.checked::before {
+    content: '';
+    position:absolute;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background:url("./images/tick.png");
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: multiply;
+    top: 20px;
+    left: 0px;
+    margin-right: 10px  ;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    /* background-color: rgb(200, 161, 224); */
+}
+
+ul li span:hover{
+    background: rgb(200, 161, 224);
+    cursor: pointer;
+}
+
+ul li button{
+    position:absolute;
+    left: 82%;
+}
