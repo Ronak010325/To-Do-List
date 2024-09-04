@@ -54,7 +54,7 @@ input{
     outline: none;
 }
 
-button{
+.row button{
     padding: 0 30px;
     border: 0;
     width: 150px;
@@ -115,6 +115,15 @@ ul li span:hover{
 ul li button{
     position:absolute;
     left: 82%;
+    padding: 0 30px;
+    border: 0;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: rgb(200, 161, 224);
+    color: rgb(103, 65, 136);
 }
 
 @media(max-width : 400px) {
