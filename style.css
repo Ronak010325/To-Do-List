@@ -25,13 +25,21 @@ body{
     border-radius: 40px;
     max-width: 550px;
     gap: 0;
-    height: 50px;
+    height: 80px;
 }
 
 h1{
     text-align: center;
     color: rgb(103, 65, 136);
     font-size: 3rem;
+}
+
+h6{
+    text-align: center;
+    color: rgb(103, 65, 136);
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 input{
@@ -47,10 +55,10 @@ input{
 }
 
 button{
-    padding: 0;
+    padding: 0 30px;
     border: 0;
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 80px;
     border-radius: 50px;
     font-size: 1.4rem;
     font-weight: bold;
@@ -107,4 +115,8 @@ ul li span:hover{
 ul li button{
     position:absolute;
     left: 82%;
+}
+
+@media(max-width : 400px) {
+    
 }
