@@ -13,7 +13,7 @@ function addtask(){
         let rest = input.value.slice(1,length).toLowerCase();
         
         //it helps to insert the input value in the li tag
-        li.innerHTML = first+rest;
+        li.innerHTML = "<div>"+first+rest+"</div>";
 
         //it helps to insert that li tag at the end of the existing li tags
         list.appendChild(li);

@@ -73,9 +73,16 @@ ul li {
     color: rgb(103, 65, 136);
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
 }
 
-.checked{
+ul li div{
+    flex: 1;
+}
+
+.checked div{
     text-decoration: line-through;
 }
 
@@ -95,7 +102,8 @@ ul li {
 }
 
 ul li span{
-    position: absolute;
+    /* position: absolute; */
+    /* flex: 1; */
     right: 0;
     top: 15px;
     width: 50px;
@@ -104,6 +112,7 @@ ul li span{
     border-radius: 50%;
     text-align: center;
     font-size: 30px;
+    text-decoration: none;
     /* background-color: rgb(200, 161, 224); */
 }
 
@@ -113,17 +122,18 @@ ul li span:hover{
 }
 
 ul li button{
-    position:absolute;
+    /* flex: 1; */
     left: 82%;
-    padding: 0 30px;
+    /* padding: 0 30px; */
     border: 0;
-    width: 150px;
+    width: 100px;
     height: 50px;
     border-radius: 50px;
     font-size: 1.4rem;
     font-weight: bold;
     background-color: rgb(200, 161, 224);
     color: rgb(103, 65, 136);
+    text-decoration: none;
 }
 
 @media(max-width : 400px) {
