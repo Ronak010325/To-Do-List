@@ -74,6 +74,7 @@ ul li {
     position: relative;
     cursor: pointer;
     display: flex;
+    gap: 10px;
     flex: auto;
     justify-content: flex-end;
 }
