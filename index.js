@@ -1,6 +1,6 @@
 const input = document.getElementById("inputText");
 const list = document.getElementById("list-container");
-
+const clearButton = document.getElementById("clear");
 function addtask(){
     if(input.value === ""){
         alert("add a task first");
@@ -49,3 +49,19 @@ function showTask() {
 }
 
 showTask();
+
+clearButton.addEventListener("click" , function(){
+    var check = document.querySelectorAll("ul li");
+    if(check.length == 0) {
+        alert("Add a Task First");
+    } else {
+        remove_list(check);
+        saveInfo();
+    }
+});
+
+function remove_list (arr) {
+    for (let i = 0 ; i < arr.length ; i++) {
+        arr[i].remove();
+    }
+}
