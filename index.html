@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>To List</title>
+        <title>To Do List</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
                 <h6>Set your Goal's for the day</h6>
                 <center>
                     <div class="row">
-                        <input type="text" id="inputText" name="task" placeholder="Add the Task">
+                        <input type="text" class="input" id="inputText" name="task" placeholder="Add the Task">
                         <button onclick="addtask()">Add me</button>
                     </div>
                 </center>
                 <br>
-                <hr width="95%">
+                <hr width="99%">
                 <ul id="list-container">
                     <!-- <li class="checked">Task 1</li>
                     <li>Task 2</li>
@@ -27,10 +27,19 @@
                 </ul>
             </div>
         </div>
+        <div class="edit-container" id="edit-con">
+            <h2>Edit</h2>
+            <hr width="95%" style="border-style: dashed;margin: 10px 0">
+                <div class="row edit">
+                    <input type="text" class="edit input" id="edit" disabled>
+                    <button class="save" onclick="save()">Save</button>
+                </div>
+        </div>
         <div class="Clear-container">
             <button id="clear">Clear All</button>
         </div>
 
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="./index.js"></script>
     </body>
 </html>

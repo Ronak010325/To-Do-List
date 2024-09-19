@@ -1,6 +1,7 @@
 const input = document.getElementById("inputText");
 const list = document.getElementById("list-container");
 const clearButton = document.getElementById("clear");
+
 function addtask(){
     if(input.value === ""){
         alert("add a task first");
@@ -18,8 +19,15 @@ function addtask(){
         //it helps to insert that li tag at the end of the existing li tags
         list.appendChild(li);
 
+        let edit = document.createElement("button");
+        edit.innerHTML = "Edit";
+        li.appendChild(edit);
+
+
+
         let button = document.createElement("button");
         button.innerHTML = "Done";
+        button.setAttribute("class","done");
         li.appendChild(button);
 
         let span = document.createElement("span");
@@ -31,14 +39,19 @@ function addtask(){
 }
 
 list.addEventListener("click" , (e) => {
-    if(e.target.tagName == "BUTTON"){
+    if(e.target.innerHTML == "Done"){
         e.target.parentElement.classList.toggle("checked");
+        saveInfo();
+    } else if (e.target.innerHTML == "Edit") {
+        edit(e.target.previousSibling.innerHTML);
         saveInfo();
     } else if(e.target.tagName == "SPAN"){
         e.target.parentElement.remove();
         saveInfo();
     }
 },false);
+
+document.firstChild
 
 function saveInfo(){
     localStorage.setItem("data" , list.innerHTML);
@@ -56,6 +69,7 @@ clearButton.addEventListener("click" , function(){
         alert("Add a Task First");
     } else {
         remove_list(check);
+        $(".edit-container").slideUp();
         saveInfo();
     }
 });
@@ -64,4 +78,35 @@ function remove_list (arr) {
     for (let i = 0 ; i < arr.length ; i++) {
         arr[i].remove();
     }
+}
+
+let before;
+let Edit = document.getElementById("edit");
+
+$(".edit-container").hide();
+
+function edit(text) {
+    before = text;
+    Edit.removeAttribute("disabled");
+    $(".edit-container").slideDown();
+    document.querySelector(".edit .input").value = text;
+}
+
+function save() {
+    let todos = document.querySelectorAll("li div");
+    // console.log(todos);
+    // console.log(todos[0].innerHTML);
+    if(Edit.value == "") {
+        alert("Enter a Task First");
+    } else {
+        for (let i = 0 ; i < todos.length ; i++) {
+            if(todos[i].innerHTML == before) {
+                todos[i].innerHTML = Edit.value;
+                saveInfo();
+            }
+        }
+    }
+    // console.log(Edit.value);
+    Edit.value = "";
+    $(".edit-container").slideUp();
 }

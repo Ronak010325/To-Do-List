@@ -42,7 +42,7 @@ h6{
     margin-bottom: 40px;
 }
 
-input{
+.input{
     border-radius: 30px;
     border: 0;
     font-size: 2rem;
@@ -64,6 +64,11 @@ input{
     font-weight: bold;
     background-color: rgb(200, 161, 224);
     color: rgb(103, 65, 136);
+    border: 2.4px dashed rgb(103, 65, 136);
+}
+
+.row button:hover {
+    background-color: rgb(193, 128, 233);
 }
 
 ul li {
@@ -77,6 +82,7 @@ ul li {
     gap: 10px;
     flex: auto;
     justify-content: flex-end;
+    border-bottom: 2px dotted rgb(103, 65, 136);
 }
 
 ul li div{
@@ -134,7 +140,13 @@ ul li button{
     font-weight: bold;
     background-color: rgb(200, 161, 224);
     color: rgb(103, 65, 136);
+    border: 2.4px dashed rgb(103, 65, 136);
     text-decoration: none;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    background-color: rgb(193, 128, 233);
 }
 
 .Clear-container{
@@ -157,3 +169,39 @@ ul li button{
     color: rgb(103, 65, 136);
     text-decoration: none;
 }
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgb(247, 239, 229);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.edit {
+    background-color: rgb(226, 191, 217);
+    border-radius: 50px;
+    height: 50px;
+}
+
+.row .save {
+    padding: 0 30px;
+    border: 0;
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgb(200, 161, 224);
+    color: rgb(103, 65, 136);
+    border: 2.4px dashed rgb(103, 65, 136);
+}
+
+.edit-container h2 {
+    margin:10px 0 0 0;
+    color: rgb(103, 65, 136);
+    font-size: 2rem;
+}
+
